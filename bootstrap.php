@@ -22,7 +22,7 @@ $dbParams = [
     'charset'  => 'utf8',
     'user'     => 'root',
     'password' => 'kurosaki',
-    'dbname'   => 'poll',
+    'dbname'   => 'tuto_doctrine',
 ];
 
 $config = Setup::createAnnotationMetadataConfiguration(
