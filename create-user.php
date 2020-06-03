@@ -8,8 +8,8 @@ use Tuto\Entity\Address;
 // $userRepo = $entityManager->getRepository(User::class);
 
 $user = new User();
-$user->setFirstname('Youssef');
-$user->setLastname('Moudni');
+$user->setFirstname('druss');
+$user->setLastname('legende');
 
 $entityManager->persist($user);
 

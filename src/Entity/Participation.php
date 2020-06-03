@@ -45,8 +45,18 @@ class Participation
     public function getId() { return $this->id; }
     public function getdate() { return $this->date; }
 
-    public function setDate($date)
+    public function setDate(\DateTime $date)
     { 
         $this->date = $date;
+    }
+
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+    }
+
+    public function setPoll(Poll $poll)
+    {
+        $this->poll = $poll; 
     }
 }
