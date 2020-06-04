@@ -38,7 +38,7 @@ class Question
         $this->answers = new ArrayCollection();
     }
 
-    public function answers()
+    public function getAnswers()
     {
         return $this->answers;
     }

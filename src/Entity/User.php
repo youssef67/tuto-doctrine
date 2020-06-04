@@ -72,5 +72,10 @@ class User
     public function setLastname($lastname)
     {
         $this->lastname = $lastname;
-    }    
+    } 
+    
+    public function getParticipations()
+    {
+        return $this->participations;
+    }
 }

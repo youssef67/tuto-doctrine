@@ -2,6 +2,7 @@
 
 namespace Tuto\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +37,16 @@ class Participation
      */
     protected $poll;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Choice::class, mappedBy="participation")
+     */
+    protected $choices;
+
+    public function __construct()
+    {
+        $this->choices = new ArrayCollection();
+    }
+
     public function __toString()
     {
         $format = "Participation (Id: %s, %s, %s)\n";
@@ -58,5 +69,16 @@ class Participation
     public function setPoll(Poll $poll)
     {
         $this->poll = $poll; 
+    }
+
+    public function addChoice(Choice $choice)
+    {
+        $this->choices->add($choice);
+        $choice->setParticipation($this);
+    }
+
+    public function getChoices()
+    {
+        return $this->choices;
     }
 }

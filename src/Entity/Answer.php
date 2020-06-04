@@ -45,5 +45,10 @@ class Answer
         $this->question = $question;
     }
 
+    public function getQuestion()
+    {
+        return $this->question;
+    }
+
 
 }
